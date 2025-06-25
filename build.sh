@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/HorizonDroidLab/manifest -b fifteen --git-lfs; \
+repo init -u https://github.com/HorizonV2/android -b lineage-22.2 --git-lfs; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250; \
@@ -20,5 +20,5 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
-lunch horizon_munch-bp1a-userdebug
+lunch lineage_munch-bp1a-userdebug
 mka horizon
