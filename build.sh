@@ -13,8 +13,8 @@ git clone https://github.com/Lordputin404/android_device_xiaomi_sm8250-common de
 git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
 git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
 git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b stable-nxt kernel/xiaomi/sm8250; \
-cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
+git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 -b stable-nxt kernel/xiaomi/sm8250; \
+#cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
