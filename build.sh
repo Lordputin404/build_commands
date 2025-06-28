@@ -13,12 +13,12 @@ rm -rf vendor/lineage-priv/keys; \
 #git clone https://github.com/Lordputin404/android_device_xiaomi_munch device/xiaomi/munch; \
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx device/xiaomi/munch; \
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common; \
+#git clone https://github.com/Lordputin404/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common; \
 
 #vendor
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
 #git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
-git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
+#git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
 
 #firmware
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
