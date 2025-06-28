@@ -53,5 +53,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-lunch clover_munch-bp1a-userdebug
+lunch munch-bp1a-userdebug
 mka clover
