@@ -12,16 +12,16 @@ rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
-rm -rf vendor/lineage-priv/keys; \
+#rm -rf vendor/lineage-priv/keys; \
 
 #dt
 #git clone https://github.com/Lordputin404/android_device_xiaomi_munch device/xiaomi/munch; \
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b 16 device/xiaomi/munch; \
 
 #git clone https://github.com/Lordputin404/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common; \
 
 #vendor
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
+git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 #git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
 #git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
 
@@ -30,7 +30,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 #git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 #kernel
-git clone https://github.com/munch-devs/kernel_xiaomi_munch kernel/xiaomi/sm8250; \
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b nxt-a16 kernel/xiaomi/sm8250; \
 cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 #git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
 
