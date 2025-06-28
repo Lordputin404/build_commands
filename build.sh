@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
 #repo init -u https://github.com/HorizonV2/android -b lineage-22.2 --git-lfs; \
 /opt/crave/resync.sh; \
 
