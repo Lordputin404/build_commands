@@ -1,7 +1,8 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/HorizonV2/android -b lineage-22.2 --git-lfs; \
+https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+#repo init -u https://github.com/HorizonV2/android -b lineage-22.2 --git-lfs; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250; \
