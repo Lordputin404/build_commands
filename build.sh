@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+repo init -u https://github.com/The-Clover-Project/manifest -b 15-qpr2 --git-lfs; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch; \
@@ -53,5 +53,5 @@ git clone https://github.com/munch-devs/private-keys -b lineage vendor/lineage-p
 
 
 . build/envsetup.sh; \
-blkilunch munch userdebug
-blki b
+lunch clover_munch-bp1a-userdebug
+mka clover
