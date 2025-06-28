@@ -35,6 +35,7 @@ git clone https://github.com/munch-devs/private-keys vendor/lineage-priv/keys; \
 
 #kernel
 git clone https://github.com/munch-devs/kernel_xiaomi_munch kernel/xiaomi/sm8250; \
+cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 #git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
 
 #hardware
