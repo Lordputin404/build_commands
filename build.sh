@@ -4,9 +4,14 @@ rm -rf .repo/local_manifests; \
 repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
 /opt/crave/resync.sh; \
 
-rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250; \
-rm -rf vendor/xiaomi/munch && rm -rf vendor/xiaomi/sm8250-common && rm -rf hardware/xiaomi && rm -rf vendor/xiaomi/munch-firmware; \
-rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX; \
+rm -rf out/target/product/munch; \
+rm -rf device/xiaomi/munch; \
+rm -rf kernel/xiaomi/munch; \
+rm -rf vendor/xiaomi/munch; \
+rm -rf hardware/xiaomi; \
+rm -rf hardware/dolby; \
+rm -rf vendor/xiaomi/miuicamera; \
+rm -rf packages/resources/devicesettings; \
 rm -rf vendor/lineage-priv/keys; \
 
 #dt
