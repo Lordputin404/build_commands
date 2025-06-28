@@ -35,7 +35,7 @@ cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf 
 #git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
 
 #hardware
-gut clone https://github.com/Evolution-X-Devices/hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/Evolution-X-Devices/hardware_xiaomi hardware/xiaomi; \
 #git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
 #additonals
