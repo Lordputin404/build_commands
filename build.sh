@@ -24,7 +24,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 #rm -rf device/lineage/sepolicy; \
 #git clone https://github.com/rik-x777/android_device_lineage_sepolicy -b qpr2 device/lineage/sepolicy; \
 
-git clone https://gitlab.com/rik-x777/keys.git vendor/lineage-priv/keys; \
+
 
 . build/envsetup.sh; \
 lunch lineage_munch-bp1a-userdebug
