@@ -9,7 +9,7 @@ rm -rf vendor/xiaomi/munch && rm -rf vendor/xiaomi/sm8250-common && rm -rf hardw
 rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX; \
 rm -rf vendor/lineage-priv/keys; \
 
-#Own 
+#dt
 #git clone https://github.com/Lordputin404/android_device_xiaomi_munch device/xiaomi/munch; \
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx device/xiaomi/munch; \
 
