@@ -46,7 +46,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 #keys
 #git clone https://github.com/munch-devs/private-keys -b lineage vendor/lineage-priv/keys; \
-#git clone https://gitlab.com/rik-x777/keys vendor/lineage-priv/keys; \
+git clone https://gitlab.com/rik-x777/keys vendor/lineage-priv/keys; \
 
 #rm -rf device/lineage/sepolicy; \
 #git clone https://github.com/rik-x777/android_device_lineage_sepolicy -b qpr2 device/lineage/sepolicy; \
