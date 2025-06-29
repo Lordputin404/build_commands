@@ -14,6 +14,23 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 #rm -rf vendor/lineage-priv/keys; \
 
+# ==== Fix for Trusty Soong Error (dummy module define) ====
+
+mkdir -p trusty/vendor/google/aosp/scripts/dummy
+
+cat > trusty/vendor/google/aosp/scripts/Android.bp << 'EOF'
+bootstrap_go_package {
+    name: "trusty_dirgroup_prebuilts_clang_host_linux-x86",
+    pkgPath: "trusty/vendor/google/aosp/scripts/dummy",
+    deps: [],
+    srcs: ["dummy.go"],
+}
+EOF
+
+echo "package dummy" > trusty/vendor/google/aosp/scripts/dummy/dummy.go
+
+# ==== End of Trusty Fix ====
+
 #dt
 #git clone https://github.com/Lordputin404/android_device_xiaomi_munch device/xiaomi/munch; \
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b 16 device/xiaomi/munch; \
