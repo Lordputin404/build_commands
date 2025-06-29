@@ -23,7 +23,7 @@ git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
-git clone https://github.com/munch-devs/android_hardware_dolby; \
+git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
