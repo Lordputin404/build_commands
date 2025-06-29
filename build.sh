@@ -45,7 +45,7 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 #keys
-git clone https://github.com/munch-devs/private-keys -b lineage vendor/lineage-priv; \
+git clone https://github.com/munch-devs/private-keys vendor/lineage-priv; \
 #git clone https://gitlab.com/rik-x777/keys vendor/lineage-priv/keys; \
 
 #rm -rf device/lineage/sepolicy; \
