@@ -12,6 +12,7 @@ rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
+rm -rf device/clover/sepolicy; \
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b clover device/xiaomi/munch; \
 
