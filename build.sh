@@ -7,12 +7,14 @@ repo init -u https://github.com/CherishOS/android_manifest -b sixteen --git-lfs;
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
 rm -rf kernel/xiaomi/munch; \
+rm -rf kernel/xiaomi/sm8250; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf device/cherish/sepolicy; \
+rm -rf packages/apps/ViPER4AndroidFX; \
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b cherish device/xiaomi/munch; \
 
