@@ -6,7 +6,7 @@ repo init -u https://github.com/CherishOS/android_manifest -b sixteen --git-lfs;
 
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf kernel/xiaomi/sm8250; \
+rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
@@ -20,8 +20,8 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b nxt-a16 kernel/xiaomi/sm8250; \
-cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b nxt-a16 kernel/xiaomi/munch; \
+cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
