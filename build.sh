@@ -8,7 +8,6 @@ rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
 rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
-rm -rf kernel/xiaomi/sm8250; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
