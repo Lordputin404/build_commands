@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/CherishOS/android_manifest -b sixteen --git-lfs; \
+repo init -u https://github.com/CherishOS/android_manifest.git -b sixteen --git-lfs; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch; \
