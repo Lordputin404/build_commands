@@ -13,7 +13,7 @@ rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
-rm -rf device/yaap/sepolicy; \
+#rm -rf device/yaap/sepolicy; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b yaap device/xiaomi/munch; \
@@ -29,7 +29,7 @@ git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaom
 
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 
-git clone https://github.com/rik-x777/android_device_lineage_sepolicy -b qpr2 device/yaap/sepolicy; \
+#git clone https://github.com/rik-x777/android_device_lineage_sepolicy -b qpr2 device/yaap/sepolicy; \
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
