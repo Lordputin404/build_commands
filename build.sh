@@ -6,7 +6,7 @@ repo init -u https://github.com/yaap/manifest -b sixteen --git-lfs; \
 
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf kernel/xiaomi/munch; \
+rm -rf kernel/xiaomi/sm8250; \
 rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
