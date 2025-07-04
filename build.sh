@@ -2,6 +2,7 @@
 
 rm -rf .repo/local_manifests; \
 repo init -u https://github.com/yaap/manifest -b sixteen --git-lfs; \
+rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch; \
