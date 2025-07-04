@@ -26,7 +26,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b a16 kernel/xiaomi/sm8250; \
 cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
-git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
+#git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/yaap/hardware_xiaomi hardware/xiaomi; \
 
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 
