@@ -6,7 +6,7 @@ repo init -u https://github.com/VoltageOS-staging/manifest -b 16 --git-lfs; \
 
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf kernel/xiaomi/sm8250; \
+rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
@@ -21,8 +21,8 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaom
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/sm8250; \
-cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
+cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/VoltageOS-staging/hardware_xiaomi hardware/xiaomi; \
 
