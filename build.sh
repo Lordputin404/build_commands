@@ -21,7 +21,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b a16 kernel/xiaomi/munch; \
 cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/VoltageOS-staging/hardware_xiaomi hardware/xiaomi; \
