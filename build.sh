@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/The-Clover-Project/manifest -b 15-qpr2 --git-lfs; \
+repo init -u https://github.com/VoltageOS-staging/manifest -b 16 --git-lfs; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch; \
