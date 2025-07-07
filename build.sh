@@ -15,8 +15,6 @@ rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
-rm -rf device/lineage/sepolicy; \
-git clone https://github.com/rik-x777/android_device_lineage_sepolicy -b qpr2 device/lineage/sepolicy; \
 
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b voltage device/xiaomi/munch; \
