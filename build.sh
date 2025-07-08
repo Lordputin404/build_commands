@@ -14,7 +14,6 @@ rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
-rm -rf device/clover/sepolicy; \
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b clover device/xiaomi/munch; \
 
@@ -39,6 +38,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-#export TARGET_RELEASE=15
 lunch clover_munch-bp1a-userdebug
 mka clover
