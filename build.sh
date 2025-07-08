@@ -1,12 +1,13 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/The-Clover-Project/manifest -b 15-qpr2 --git-lfs; \
+repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
+rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf kernel/xiaomi/sm8250; \
+rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
@@ -15,20 +16,18 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b clover device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b infinity device/xiaomi/munch; \
 
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/sm8250; \
-cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
+cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
-
-git clone https://github.com/rik-x777/android_device_lineage_sepolicy -b qpr2 device/clover/sepolicy; \
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
@@ -38,5 +37,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-lunch clover_munch-bp1a-userdebug
-mka clover
+lunch infinity_munch-userdebug
+mka bacon
