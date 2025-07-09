@@ -45,4 +45,12 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 . build/envsetup.sh; \
 
+# Download device_framework_matrix.xml if not present
+if [ ! -f vendor/voltage/config/device_framework_matrix.xml ]; then
+    echo "Downloading device_framework_matrix.xml..."
+    mkdir -p vendor/voltage/config
+    curl -L -o vendor/voltage/config/device_framework_matrix.xml \
+    https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-22.1/config/device_framework_matrix.xml
+fi
+
 brunch munch
