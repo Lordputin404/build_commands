@@ -5,11 +5,6 @@ repo init -u https://github.com/VoltageOS-staging/manifest -b 16 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
-# Clone Voltage signing keys and generate them
-git clone https://github.com/VoltageOS/vendor_voltage-priv_keys vendor/voltage-priv/keys
-cd vendor/voltage-priv/keys
-chmod +x keys.sh && ./keys.sh
-cd ../../..
 
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
@@ -44,13 +39,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-
-# Download device_framework_matrix.xml if not present
-if [ ! -f vendor/voltage/config/device_framework_matrix.xml ]; then
-    echo "Downloading device_framework_matrix.xml..."
-    mkdir -p vendor/voltage/config
-    curl -L -o vendor/voltage/config/device_framework_matrix.xml \
-    https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-22.1/config/device_framework_matrix.xml
-fi
 
 brunch munch
