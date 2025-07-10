@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/VoltageOS-staging/manifest -b 16 --git-lfs; \
+repo init -u https://github.com/WitAqua/manifest -b 16.0 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -39,5 +39,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-
-brunch munch
+lunch witaqua_munch-userdebug
+mka bacon
