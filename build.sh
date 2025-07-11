@@ -18,7 +18,7 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b aqua device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b 16 device/xiaomi/munch; \
 
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
@@ -39,5 +39,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-lunch witaqua_munch-bp2a-userdebug
+lunch lineage_munch-bp2a-userdebug
 mka bacon
