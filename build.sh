@@ -41,6 +41,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
 
+https://github.com/LineageOS/android_hardware_qcom_bootctrl -b lineage-23.0-caf hardware/qcom/bootctrl; \
+
 
 . build/envsetup.sh; \
 
