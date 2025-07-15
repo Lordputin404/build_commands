@@ -37,5 +37,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-lunch lineage_munch-userdebug
-m bacon
+lunch lineage_munch-bp2a-userdebug
+mka bacon
