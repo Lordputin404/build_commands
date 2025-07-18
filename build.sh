@@ -38,5 +38,5 @@ git clone https://github.com/Lordputin404/packages_apps_Settings packages/apps/S
 
 . build/envsetup.sh; \
 
-lunch lunaris_munch-bp2a-userdebug
+lunch lineage_munch-bp2a-userdebug
 m lunaris
