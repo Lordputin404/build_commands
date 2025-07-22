@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/The-Clover-Project/manifest -b 16 --git-lfs; \
+repo init -u https://github.com/DerpFest-AOSP/android_manifest -b 16 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -16,7 +16,7 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b clover device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b derpfest device/xiaomi/munch; \
 
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
@@ -35,5 +35,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-lunch clover_munch-bp2a-userdebug
-mka clover
+lunch lineage_munch-bp2a-userdebug
+mka derp
