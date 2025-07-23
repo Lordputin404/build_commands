@@ -5,7 +5,19 @@ repo init -u https://github.com/yaap/manifest -b sixteen --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
-rm -rf out/target/product/munch device/xiaomi/munch kernel/xiaomi vendor/xiaomi/munch-firmware vendor/xiaomi/munch hardware/xiaomi hardware/dolby vendor/xiaomi/miuicamera packages/resources/devicesettings packages/apps/FastCharge packages/apps/ViPER4AndroidFX
+mf=(
+device/xiaomi
+kernel/xiaomi
+vendor/xiaomi
+hardware/xiaomi
+hardware/dolby
+packages/resources/devicesettings
+packages/apps/FastCharge
+packages/apps/ViPER4AndroidFX
+)
+
+rm -rf "${mf[@]}"
+
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b yaap device/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16 vendor/xiaomi/munch
