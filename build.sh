@@ -41,7 +41,7 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge
-
+rm -rf bionic
 git clone https://github.com/Lordputin404/bionic bionic
 source build/envsetup.sh
 
