@@ -42,7 +42,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge
 
-
+git clone https://github.com/Lordputin404/bionic bionic
 source build/envsetup.sh
 
 lunch yaap_munch-userdebug && m yaap
