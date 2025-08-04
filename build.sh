@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -14,9 +14,9 @@ rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
-rm -rf packages_apps_Settings/res/values; \
+rm -f packages/apps/Settings/res/values/lunaris_strings.xml; \
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b axion device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b lunaris device/xiaomi/munch; \
 
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
@@ -33,8 +33,7 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-
-. build/envsetup.sh; \
-gk -s
-axion munch userdebug va
-ax -br -j<nproc>
+curl -L https://raw.githubusercontent.com/Lordputin404/packages_apps_Settings/main/lunaris_strings.xml -o packages/apps/Settings/res/values/lunaris_strings.xml
+. b*/env*
+lunch lineage_munch-bp2a-userdebug
+m Lunaris
