@@ -36,4 +36,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 curl -L https://raw.githubusercontent.com/Lordputin404/packages_apps_Settings/main/lunaris_strings.xml -o packages/apps/Settings/res/values/lunaris_strings.xml
 . b*/env*
 lunch lineage_munch-bp2a-userdebug
-m Lunaris
+m lunaris
