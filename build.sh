@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -16,13 +16,13 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages_apps_Settings/res/values; \
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b lunaris device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b axion device/xiaomi/munch; \
 
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch; \
+git clone https://github.com/Lordputin404/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch; \
 cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
@@ -33,10 +33,8 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-git clone https://github.com/Lordputin404/packages_apps_Settings packages/apps/Settings; \
-
 
 . build/envsetup.sh; \
-
-lunch lineage_munch-bp2a-userdebug
-m lunaris
+gk -s
+axion munch userdebug va
+ax -br -j<nproc>
