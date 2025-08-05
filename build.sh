@@ -40,3 +40,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 source build/envsetup.sh
 lunch lineage_munch-bp1a-userdebug
+mka eos
