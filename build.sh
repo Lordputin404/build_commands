@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://gitlab.e.foundation/e/os/android.git -b a15 --git-lfs; \
+repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -18,7 +18,7 @@ packages/apps/ViPER4AndroidFX
 
 rm -rf "${mf[@]}"
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b eos device/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b rising device/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16 vendor/xiaomi/munch
 
@@ -29,7 +29,7 @@ cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf K
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
 
-#git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
+git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
@@ -39,5 +39,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 source build/envsetup.sh
-lunch lineage_munch-bp1a-userdebug
-mka eos
+riseup munch userdebug
+rise b
