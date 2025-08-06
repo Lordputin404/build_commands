@@ -6,14 +6,14 @@ rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
 mf=(
-device/xiaomi
-kernel/xiaomi
-vendor/xiaomi
+device/xiaomi/munch
+kernel/xiaomi/munch
+vendor/xiaomi/munch
+vendor/xiaomi/munch-firmware
 hardware/xiaomi
 hardware/dolby
 packages/resources/devicesettings
-packages/apps/FastCharge
-packages/apps/ViPER4AndroidFX
+vendor/xiaomi/miuicamera
 )
 
 rm -rf "${mf[@]}"
