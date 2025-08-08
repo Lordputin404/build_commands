@@ -33,7 +33,7 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-git clone https://github.com/Lordputin404/packages_apps_Settings packages/apps/Settings/res/values/lunaris_strings.xml
+git clone https://github.com/Lordputin404/packages_apps_Settings packages/apps/Settings/res/values; \
 . b*/env*
 lunch lineage_munch-bp2a-userdebug
 m lunaris
