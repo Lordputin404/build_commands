@@ -1,6 +1,6 @@
 #! /bin/bash
 
-rm -rf .repo/local_manifests;
+rm -rf .repo/local_manifests; \
 repo init -u https://github.com/VoltageOS/manifest.git -b 16 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
