@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
+repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -18,7 +18,7 @@ vendor/xiaomi/miuicamera
 
 rm -rf "${mf[@]}"
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b axion device/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b rising device/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16 vendor/xiaomi/munch
 
@@ -39,6 +39,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 source build/envsetup.sh
-gk -s
-axion munch userdebug va
-ax -br -j16
+riseup munch userdebug
+rise b
