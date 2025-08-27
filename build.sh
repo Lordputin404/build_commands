@@ -20,7 +20,7 @@ rm -rf "${mf[@]}"
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b axion device/xiaomi/munch
 
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16 vendor/xiaomi/munch
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
