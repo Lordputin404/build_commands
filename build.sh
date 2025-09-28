@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -18,7 +18,7 @@ vendor/xiaomi/miuicamera
 
 rm -rf "${mf[@]}"
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b evox device/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b lineage device/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch
 
@@ -39,5 +39,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 source build/envsetup.sh
-lunch lineage_munch-bp2a-userdebug
-m evolution
+brunch munch
