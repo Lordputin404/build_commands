@@ -1,6 +1,5 @@
 # repo init
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
-
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 # repo sync script
 /opt/crave/resync.sh
 
@@ -16,8 +15,8 @@ vendor/lineage-priv/keys
 rm -rf "${remove[@]}"
 
 # Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch LunarisAOSP-16 device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common LunarisAOSP-16 device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
@@ -45,9 +44,3 @@ export BUILD_HOSTNAME=ubuntu
 export SKIP_ABI_CHECKS=true
 lunch lineage_munch-bp2a-user
 m bacon
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
-
-
-source build/envsetup.sh
-riseup munch userdebug
-rise b
