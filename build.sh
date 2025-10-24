@@ -1,40 +1,50 @@
-#! /bin/bash
+# repo init
+repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 
-rm -rf .repo/local_manifests; \
-repo init -u https://github.com/RisingOS-Revived/android -b sixteen-aosp --git-lfs; \
-rm -rf prebuilts/clang/host/linux-x86; \
-/opt/crave/resync.sh; \
+# repo sync script
+/opt/crave/resync.sh
 
-mf=(
-device/xiaomi/munch
-kernel/xiaomi/munch
-vendor/xiaomi/munch
-vendor/xiaomi/munch-firmware
+# Remove old device specific repos
+remove=(
+device/xiaomi
+kernel/xiaomi
+vendor/xiaomi
 hardware/xiaomi
-hardware/dolby
-packages/resources/devicesettings
-vendor/xiaomi/miuicamera
+vendor/lineage-priv/keys
 )
 
-rm -rf "${mf[@]}"
+rm -rf "${remove[@]}"
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b rising device/xiaomi/munch
+# Deivce Trees
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common
 
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch
+# Vendor Trees
+git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common
 
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
+# Munch Firmware
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
-git clone https://github.com/Lordputin404/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
+# Kernel Tree
+git clone --depth=1 https://github.com/PocoF4Trees/kernel_xiaomi_sm8250 -b staging-noksu kernel/xiaomi/sm8250
 
-git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
+# Hardware Xiaomi
+git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaomi
 
-git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
+# MIUI Camera
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
+# My Keys
+git clone https://github.com/Olzhas-Kdyr/keys.git vendor/lineage-priv/keys
 
-#git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
-
+# Building 
+. build/envsetup.sh
+export BUILD_USERNAME=olzhas
+export BUILD_HOSTNAME=ubuntu
+export SKIP_ABI_CHECKS=true
+lunch lineage_munch-bp2a-user
+m bacon
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 
