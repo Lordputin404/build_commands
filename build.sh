@@ -5,6 +5,7 @@ repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 
 # Remove old device specific repos
 remove=(
+out/target/product/munch
 device/xiaomi
 kernel/xiaomi
 vendor/xiaomi
