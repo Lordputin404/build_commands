@@ -13,9 +13,9 @@ hardware/xiaomi
 
 rm -rf "${remove[@]}"
 
-# Deivce Trees
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch LunarisAOSP-16 device/xiaomi/munch
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common LunarisAOSP-16 device/xiaomi/sm8250-common
+# Device Trees
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch -b LunarisAOSP-16 device/xiaomi/munch
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_sm8250-common -b LunarisAOSP-16 device/xiaomi/sm8250-common
 
 # Vendor Trees
 git clone https://github.com/Olzhas-Kdyr/proprietary_vendor_xiaomi_munch vendor/xiaomi/munch
