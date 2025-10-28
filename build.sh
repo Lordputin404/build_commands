@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
+repo init -u https://git.halogenos.org/halogenOS/android_manifest.git -b XOS-16.0; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -18,7 +18,7 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b halogen device/xiaomi/munch; \
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch; \
 
@@ -39,5 +39,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-lunch lineage_munch-bp2a-user
-m lunaris
+build full aosp_munch-bp2a-userdebug
