@@ -39,4 +39,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-build full aosp_munch-bp2a-userdebug
+build full aosp_munch-bp2a-user
