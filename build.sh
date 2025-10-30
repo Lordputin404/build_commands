@@ -37,6 +37,8 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
+git clone https://github.com/LineageOS/android_vendor_lineage -b lineage-23.0 vendor/lineage; \
+
 
 . build/envsetup.sh; \
 build full aosp_munch-bp2a-user
