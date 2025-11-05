@@ -25,7 +25,6 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b stable-next kernel/xiaomi/munch
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
 
