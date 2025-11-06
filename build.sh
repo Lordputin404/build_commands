@@ -1,6 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
+rm -rf packages/resources/devicesettings; \
 repo init -u https://github.com/ProjectInfinity-X/manifest -b 16 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
@@ -38,4 +39,5 @@ git clone https://github.com/munch-devs/android_vendor_bcr -b vic vendor/bcr
 
 . build/envsetup.sh; \
 lunch infinity_munch-bp2a-user
+make installclean
 m bacon
