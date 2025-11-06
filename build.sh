@@ -11,6 +11,19 @@ else
     repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 fi
 
+mf=(
+device/xiaomi/munch
+kernel/xiaomi/munch
+vendor/xiaomi/munch
+vendor/xiaomi/munch-firmware
+hardware/xiaomi
+hardware/dolby
+packages/resources/devicesettings
+vendor/xiaomi/miuicamera
+)
+
+rm -rf "${mf[@]}"
+
 
 echo "==> Cleaning old outputs and device/vendor/hardware trees..."
 dirs_to_remove=(
