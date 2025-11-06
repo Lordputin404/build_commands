@@ -22,7 +22,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16-exp ve
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
