@@ -1,6 +1,6 @@
 #! /bin/bash
 
-rm -rf .repo/local_manifests
+rm -rf .repo
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 rm -rf prebuilts/clang/host/linux-x86
 /opt/crave/resync.sh
