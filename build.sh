@@ -34,6 +34,9 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 
+git clone https://github.com/UdayKumarChunduru/android_vendor_bcr -b vic vendor/bcr
+
+
 source build/envsetup.sh
 lunch infinity_munch-user
 make installclean
