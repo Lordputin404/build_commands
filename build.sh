@@ -5,9 +5,9 @@ repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/man
 /opt/crave/resync.sh
 
 mf=(
-device/xiaomi/munch
-kernel/xiaomi/munch
-vendor/xiaomi/munch
+device
+kernel
+vendor
 vendor/xiaomi/munch-firmware
 hardware/xiaomi
 hardware/dolby
