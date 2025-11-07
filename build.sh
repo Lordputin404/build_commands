@@ -5,6 +5,7 @@ repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/man
 /opt/crave/resync.sh
 
 mf=(
+out/target/product/munch
 device/xiaomi/munch
 kernel/xiaomi/munch
 vendor/xiaomi/munch
