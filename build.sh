@@ -23,6 +23,8 @@ git clone https://github.com/Ronin-293/android_device_xiaomi_onyx-kernel -b line
 
 git clone https://github.com/Ronin-293/android_hardware_xiaomi hardware/xiaomi
 
+https://github.com/Ronin-293/android_packages_apps_XiaomiDolby packages/apps/XiaomiDolby
+
 
 source build/envsetup.sh
 lunch clover_onyx-bp2a-user
