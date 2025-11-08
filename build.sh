@@ -1,19 +1,16 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests/
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/The-Clover-Project/manifest.git -b 16 --git-lfs
 /opt/crave/resync.sh
 
 mf=(
-out/target/product/munch
-device/xiaomi/munch
-kernel/xiaomi/munch
-vendor/xiaomi/munch
-vendor/xiaomi/munch-firmware
+out/target/product/onyx
+device/xiaomi
+kernel/xiaomi
+vendor/xiaomi
 hardware/xiaomi
-hardware/dolby
-packages/resources/devicesettings
-vendor/xiaomi/miuicamera
+packages/apps/XiaomiDolby
 )
 
 rm -rf "${mf[@]}"
@@ -23,19 +20,12 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
-git clone https://github.com/Lordputin404/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch
+git clone https://github.com/Ronin-293/android_device_xiaomi_onyx-kernel -b 16-ksu kernel/xiaomi/onyx
 cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..
 
-git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
-
-git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
-
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
-
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+git clone https://github.com/Ronin-293/android_hardware_xiaomi hardware/xiaomi
 
 
-git clone https://github.com/UdayKumarChunduru/android_vendor_bcr -b vic vendor/bcr
 
 
 source build/envsetup.sh
