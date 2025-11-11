@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Project-Mist-OS/manifest -b bp2a --git-lfs; \
+repo init -u https://github.com/AviumUI/android_manifests -b avium-16 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -18,14 +18,13 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b mist device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b avium device/xiaomi/munch; \
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch; \
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
@@ -37,5 +36,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
-mistify munch user
-mist b
+lunch lineage_munch-bp2a-user
+m bacon
