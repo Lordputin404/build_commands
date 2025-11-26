@@ -18,7 +18,7 @@ vendor/xiaomi/miuicamera
 
 rm -rf "${mf[@]}"
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch_hdzungx -b lineage device/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lineage device/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch
 
