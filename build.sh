@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.1 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
