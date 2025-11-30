@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Project-Mist-OS/manifest -b bp2a --git-lfs; \
+repo init -u https://github.com/Project-Mist-OS/manifest -b 4.3 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
