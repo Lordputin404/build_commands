@@ -6,7 +6,6 @@ rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
 
-rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
 rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
