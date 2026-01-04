@@ -28,7 +28,7 @@ git clone https://github.com/SenseiiX/fusionX_sm8250 -b stable-next kernel/xiaom
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
-git clone https://github.com/Pong-Development/hardware_dolby; \
+git clone https://github.com/Pong-Development/hardware_dolby hardware/dolby; \
 
 #git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 
