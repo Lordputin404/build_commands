@@ -36,4 +36,4 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-./rom-build.sh munch
+./rom-build.sh munch-userdebug
