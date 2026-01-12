@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests/
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr1 --git-lfs
 /opt/crave/resync.sh
 
 mf=(
@@ -18,13 +18,13 @@ vendor/xiaomi/miuicamera
 
 rm -rf "${mf[@]}"
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b infinity device/xiaomi/munch
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b pixel device/xiaomi/munch
+
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-exp vendor/xiaomi/munch
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
-git clone https://github.com/Lordputin404/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-rksu kernel/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
 
@@ -34,11 +34,6 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-
-git clone https://github.com/UdayKumarChunduru/android_vendor_bcr -b vic vendor/bcr
-
-
 source build/envsetup.sh
-lunch infinity_munch-user
-make installclean
-m bacon
+breakfast munch
+m pixelos
