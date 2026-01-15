@@ -26,7 +26,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-rksu kernel/xiaomi/munch
 
-git clone https://github.com/PixelOS-AOSP/android_hardware_xiaomi hardware/xiaomi
+git clone https://github.com/Kenskuyy-Prjkt/hardware_xiaomi hardware/xiaomi
 
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
 
