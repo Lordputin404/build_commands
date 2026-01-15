@@ -24,7 +24,7 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-exp 
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-rksu kernel/xiaomi/munch
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch
 
 git clone https://github.com/Kenskuyy-Prjkt/hardware_xiaomi hardware/xiaomi
 
