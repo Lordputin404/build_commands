@@ -20,11 +20,11 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b alpha device/xiaomi/munch; \
 
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch_hdzungx -b 16-exp vendor/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-exp vendor/xiaomi/munch; \
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/Lordputin404/kernel_xiaomi_munch -b 16-ksu kernel/xiaomi/munch; \
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-rksu kernel/xiaomi/munch; \
 cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
