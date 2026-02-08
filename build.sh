@@ -38,4 +38,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 . build/envsetup.sh; \
 lunch lineage_munch-bp4a-user
-m lunaris
+m bacon
