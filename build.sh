@@ -23,7 +23,7 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vend
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/munch-devs/android_kernel_xiaomi_munch -b e404 kernel/xiaomi/munch; \
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
