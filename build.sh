@@ -20,10 +20,9 @@ git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
-
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250-oxy -b munch-23.2 kernel/xiaomi/munch; \
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
