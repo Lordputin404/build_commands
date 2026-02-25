@@ -39,4 +39,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 source build/envsetup.sh
 gk -s
 axion munch va
-ax -br -j<count>
+ax -br
