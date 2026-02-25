@@ -1,15 +1,9 @@
 #! /bin/bash
 
-rm -rf .repo/local_manifests
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs
-rm -rf prebuilts/clang/host/linux-x86
-
-echo "==> Syncing sources..."
-if [ -f /opt/crave/resync.sh ]; then
-    /opt/crave/resync.sh
-else
-    repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
-fi
+rm -rf .repo/local_manifests; \
+repo init -u repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs; \
+rm -rf prebuilts/clang/host/linux-x86; \
+/opt/crave/resync.sh; \
 
 mf=(
 device/xiaomi/munch
@@ -18,48 +12,31 @@ vendor/xiaomi/munch
 vendor/xiaomi/munch-firmware
 hardware/xiaomi
 hardware/dolby
-packages/resources/devicesettings
 vendor/xiaomi/miuicamera
 )
 
 rm -rf "${mf[@]}"
 
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b axion device/xiaomi/munch
 
-echo "==> Cleaning old outputs and device/vendor/hardware trees..."
-dirs_to_remove=(
-    out/target/product/munch
-    out/target/product/gapps
-    out/target/product/vanilla
-    device/xiaomi/munch
-    kernel/xiaomi/munch
-    vendor/xiaomi/munch
-    vendor/xiaomi/munch-firmware
-    hardware/xiaomi
-    hardware/dolby
-    vendor/xiaomi/miuicamera
-)
-rm -rf "${dirs_to_remove[@]}"
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
 
-echo "=== Cloning device trees ==="
-git clone https://github.com/Project-SenX/android_device_xiaomi_munch -b ax device/xiaomi/munch
-git clone https://github.com/Project-SenX/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b ax kernel/xiaomi/munch
-git clone https://github.com/Project-SenX/android_hardware_xiaomi hardware/xiaomi
-git clone https://github.com/Project-SenX/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
+
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch
+
+git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
+
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
-git clone https://github.com/Project-SenX/android_vendor_xiaomi_miuicamera -b vic vendor/xiaomi/miuicamera
 
-echo "=== Starting GMS (Pico) build ==="
-. build/envsetup.sh
-axion munch user gms pico
-ax -br
-mv out/target/product/munch out/target/product/gapps
+#git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
-echo "=== Starting Vanilla (AOSP) build ==="
-. build/envsetup.sh
-axion munch user va
-ax -br
-mv out/target/product/munch out/target/product/vanilla
+#git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 
-echo "=== All builds completed successfully! ==="
+source build/envsetup.sh
+gk -s
+axion munch va
+ax -br -j<count>
