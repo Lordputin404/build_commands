@@ -30,7 +30,7 @@ git clone https://github.com/Kenskuyy-Prjkt/hardware_xiaomi hardware/xiaomi
 
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
 
-#git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
+git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
