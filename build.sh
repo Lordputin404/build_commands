@@ -36,5 +36,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 
 . build/envsetup.sh; \
+avium get_gms
 lunch lineage_munch-bp4a-user
 m bacon -j$(nproc --all)
