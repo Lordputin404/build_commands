@@ -32,8 +32,10 @@ git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
-#cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
+cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
 
 . build/envsetup.sh; \
+RELAX_USES_LIBRARY_CHECK=true
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 mistify munch user
 mist b
