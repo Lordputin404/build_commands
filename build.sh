@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs; \
+repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -16,27 +16,28 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris-test device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris-test device/xiaomi/munch
 
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
 
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch
+#git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch
+git clone https://github.com/munch-devs/android_kernel_xiaomi_munch -b e404 kernel/xiaomi/munch
 
-git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
 
-git clone https://github.com/Lordputin404/android_hardware_dolby hardware/dolby; \
+git clone https://github.com/Lordputin404/android_hardware_dolby hardware/dolby
 
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
+git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
-git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
+git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
 
 
-. build/envsetup.sh; \
+. build/envsetup.sh
 lunch lineage_munch-bp4a-user
 m bacon
