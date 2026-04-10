@@ -16,7 +16,7 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris-test device/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris device/xiaomi/munch
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
 
