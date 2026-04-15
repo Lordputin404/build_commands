@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/Project-Mist-OS/manifest.git -b 16.2 --git-lfs; \
+repo init -u https://github.com/baikalos/android.git -b 16.0 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -17,7 +17,7 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b mist device/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b baikal device/xiaomi/munch; \
 
 git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
@@ -35,5 +35,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
 
 . build/envsetup.sh; \
-mistify munch user
-mist b
+brunch munch
