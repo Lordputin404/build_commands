@@ -34,19 +34,11 @@ git clone https://github.com/Lordputin404/android_hardware_dolby hardware/dolby
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
-git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+#git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
-#cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
-cd frameworks/base
-
-# Check if commit exists before reverting (optional but safe)
-if git log --oneline | grep -q 8c620647d25048564c428cb6754396f29e42070c; then
-    git revert --no-edit 8c620647d25048564c428cb6754396f29e42070c
-fi
-
-cd -
+cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
 
 . build/envsetup.sh
 lunch lineage_munch-bp4a-user
