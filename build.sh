@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests; \
-repo init -u https://github.com/alphadroid-project/manifest -b alpha-16.1 --git-lfs; \
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-16.2 --git-lfs; \
 rm -rf prebuilts/clang/host/linux-x86; \
 /opt/crave/resync.sh; \
 
@@ -20,12 +20,14 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b alpha device/xiaomi/munch; \
 
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-exp vendor/xiaomi/munch; \
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-rksu kernel/xiaomi/munch; \
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
+git clone https://github.com/kvsnr113/xiaomi_sm8250_kernel_e404 -b bpf kernel/xiaomi/munch
+cd kernel/xiaomi/munch
+git submodule update --init --remote --merge
+cd ../../..
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi; \
 
@@ -35,8 +37,8 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 #git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_m͟i͟u͟i͟c͟a͟m͟e͟r͟a͟ v͟e͟n͟d͟o͟r͟/x͟i͟a͟o͟m͟i͟/m͟i͟u͟i͟c͟a͟m͟e͟r͟a͟; \
 
 
-. build/envsetup.sh; \
-lunch alpha_munch-user && make bacon
+. b͟u͟i͟l͟d͟/e͟n͟v͟s͟e͟t͟u͟p͟.s͟h͟; \
+brunch munch
