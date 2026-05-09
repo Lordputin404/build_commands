@@ -38,6 +38,12 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
+git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+
+https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+
+git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/GameBar
+
 #cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
 
 . build/envsetup.sh
