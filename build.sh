@@ -40,7 +40,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+gut clone https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/GameBar
 
