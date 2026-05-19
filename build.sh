@@ -14,6 +14,7 @@ rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
+rm -rf packages/apps/TouchServices
 
 
 git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris device/xiaomi/munch
