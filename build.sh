@@ -46,7 +46,7 @@ git clone https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages
 git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/GameBar
 
 #cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
-#sed -i '/binder_call(touchservice_app, default_android_hwservice)/d' /packages/apps/TouchServices/sepolicy/private/touchservice_app.te
+sed -i '/binder_call(touchservice_app, default_android_hwservice)/d' /packages/apps/TouchServices/sepolicy/private/touchservice_app.te
 
 . build/envsetup.sh
 lunch lineage_munch-bp4a-user
