@@ -17,9 +17,9 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 rm -rf packages/apps/TouchServices
 
 
-git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris device/xiaomi/munch
+git clone https://github.com/Lordputin404/android_device_xiaomi_munch -b lunaris-test device/xiaomi/munch
 
-git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
+git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-test vendor/xiaomi/munch
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
@@ -31,7 +31,7 @@ cd ../../..
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
 
-git clone https://github.com/Lordputin404/android_hardware_dolby hardware/dolby
+git clone https://github.com/Lordputin404/android_hardware_dolby -b main-test hardware/dolby
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
