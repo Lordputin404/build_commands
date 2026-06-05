@@ -35,8 +35,6 @@ git clone https://github.com/Lordputin404/android_hardware_dolby -b main-test ha
 
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 
-#git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
-
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
@@ -44,9 +42,6 @@ git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineag
 git clone https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/GameBar
-
-#cd hard*/line*/compat/ &&git fetch https://github.com/LineageOS/android_hardware_lineage_compat refs/changes/04/447604/1 && git cherry-pick FETCH_HEAD && cd -
-sed -i '/binder_call(touchservice_app, default_android_hwservice)/d' /packages/apps/TouchServices/sepolicy/private/touchservice_app.te
 
 . build/envsetup.sh
 lunch lineage_munch-bp4a-user
