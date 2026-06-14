@@ -24,7 +24,7 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-test
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 #git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch
-git clone https://github.com/kvsnr113/xiaomi_sm8250_kernel_e404 -b main-bpf kernel/xiaomi/munch
+git clone https://github.com/Lordputin404/xiaomi_sm8250_kernel_e404 -b main-test kernel/xiaomi/munch
 cd kernel/xiaomi/munch
 git submodule update --init --remote --merge
 cd ../../..
