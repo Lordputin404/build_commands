@@ -45,4 +45,6 @@ git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/G
 
 . build/envsetup.sh
 lunch lineage_munch-bp4a-user
+BUILD_USERNAME=lordputin
+BUILD_HOSTNAME=serverhive
 m bacon
