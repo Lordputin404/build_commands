@@ -43,7 +43,8 @@ git clone https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages
 
 git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/GameBar
 
-git clone https://github.com/Tsaritsa-Prjkt/android_vendor_lineage-priv_keys vendor/lineage-priv/keys
+git clone https://github.com/Lordputin404/private-keys/settings vendor/lineage-priv/keys
+
 . build/envsetup.sh
 lunch lineage_munch-bp4a-user
 BUILD_USERNAME=lordputin
