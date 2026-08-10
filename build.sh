@@ -24,7 +24,7 @@ git clone https://github.com/Lordputin404/android_vendor_xiaomi_munch -b 16-qpr2
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
 #git clone https://github.com/SenseiiX/fusionX_sm8250 -b bkp kernel/xiaomi/munch
-git clone https://github.com/Lordputin404/xiaomi_sm8250_kernel_e404 -b main-test kernel/xiaomi/munch
+git clone https://github.com/Lordputin404/xiaomi_sm8250_kernel_e404 -b staging kernel/xiaomi/munch
 cd kernel/xiaomi/munch
 git submodule update --init --remote --merge
 cd ../../..
@@ -43,6 +43,7 @@ git clone https://github.com/Lordputin404/packages_apps_ViPER4AndroidFX packages
 
 git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/GameBar
 
+git clone https://github.com/Tsaritsa-Prjkt/android_vendor_lineage-priv_keys vendor/lineage-priv/keys
 . build/envsetup.sh
 lunch lineage_munch-bp4a-user
 BUILD_USERNAME=lordputin
