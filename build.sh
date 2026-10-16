@@ -31,9 +31,9 @@ cd ../../..
 
 git clone https://github.com/Lordputin404/android_hardware_xiaomi hardware/xiaomi
 
-git clone https://github.com/Lordputin404/android_hardware_dolby -b main hardware/dolby
+git clone https://github.com/Lordputin404/android_hardware_dolby -b main vendor/dolby
 
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
+git clone https://github.com/Tsaritsa-Prjkt/android_packages_resources_devicesettings packages/resources/devicesettings
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
