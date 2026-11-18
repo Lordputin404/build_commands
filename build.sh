@@ -35,7 +35,7 @@ git clone https://github.com/Lordputin404/android_vendor_dolby -b main vendor/do
 
 git clone https://github.com/Meow-prjkt/android_packages_resources_devicesettings packages/resources/devicesettings
 
-git clone https://github.com/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+git clone https://github.com/munch-devs/android_vendor_xiaomi_miuicamera -b 16 vendor/xiaomi/miuicamera
 
 git clone https://github.com/kenway214/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
