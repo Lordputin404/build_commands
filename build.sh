@@ -46,7 +46,7 @@ git clone https://github.com/kenway214/packages_apps_GameBar.git packages/apps/G
 git clone https://github.com/Lordputin404/private-keys vendor/lineage-priv/keys
 
 . build/envsetup.sh
-lunch lineage_munch-bp4a-user
+lunch rr_munch-user
 BUILD_USERNAME=lordputin
 BUILD_HOSTNAME=serverhive
-m bacon
+mka bacon
